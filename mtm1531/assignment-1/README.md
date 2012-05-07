@@ -4,7 +4,7 @@ Twenty Thousand Leagues Under the Sea is a classic science fiction novel by Fren
 published in 1870. It tells the story of [Captain Nemo]() and his submarine Nautilus as seen from the 
 perspective of Professor Pierre Aronnax.
 
-![Twenty Thousand Leagues Under the Sea book cover](https://github.com/Frederick-Iyela/assignments/tree/master/mtm1531/assignment-1/images/jules-verne-book.jpg)
+![Twenty Thousand Leagues Under the Sea book cover](https://github.com/Frederick-Iyela/assignments/blob/master/mtm1531/assignment-1/images/jules-verne-book.jpg)
 
 - [Wikipedia entry](http://en.wikipedia.org/wiki/Twenty_Thousand_Leagues_Under_the_Sea)
 
