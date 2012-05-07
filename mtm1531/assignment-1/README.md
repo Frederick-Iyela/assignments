@@ -4,7 +4,7 @@
 published in 1870. It tells the story of [Captain Nemo]() and his submarine *Nautilus* as seen from the 
 perspective of Professor Pierre Aronnax.
 
-![Twenty Thousand Leagues Under the Sea book cover](/jules-verne-book.jpg)
+![Twenty Thousand Leagues Under the Sea book cover](./jules-verne-book.jpg)
 
 - [Wikipedia entry](http://en.wikipedia.org/wiki/Twenty_Thousand_Leagues_Under_the_Sea)
 
