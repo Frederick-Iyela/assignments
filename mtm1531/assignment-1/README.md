@@ -30,7 +30,7 @@ phosphorescent, and infinitely larger and more rapid in its movements than a wha
 
 ## About Jules Verne
 
-**Jules Gabriel Verne** \(February 8, 1828 \– March 24, 1905\) was a French author who pioneered the science 
+**Jules Gabriel Verne** \(February 8, 1828 &#45; March 24, 1905\) was a French author who pioneered the science 
 fiction genre. Verne wrote about space, air, and underwater travel before air travel and practical 
 submarines were invented, and before practical means of space travel had been devised.
 
