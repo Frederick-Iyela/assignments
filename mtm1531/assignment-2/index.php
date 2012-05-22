@@ -36,6 +36,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Money Calculator Form</title>
+		<link href="css/general.css" rel="stylesheet">
 	</head>
 	
 	<body>
@@ -63,26 +64,26 @@
 				switch($_POST['function']) {
 					case '+':
 					?>
-						<strong>$ <?php echo addTwo($value1, $value2);?></strong>
+						<p>$ <?php echo addTwo($value1, $value2);?>  (tax included)</p>
 					<?php
 					break;
 					
 					case '-':
 					?>
-						<strong>$ <?php echo subtractTwo($value1, $value2);?></strong>
+						<p>$ <?php echo subtractTwo($value1, $value2);?>  (tax included)</p>
 					<?php
 					break;
 					
 					case '*':
 					?>
-						<strong>$ <?php echo multiplyTwo($value1, $value2);?></strong>
+						<p>$ <?php echo multiplyTwo($value1, $value2);?>  (tax included)</p>
 						
 					<?php
 					break;
 					
 					case '/':
 					?>
-						<strong>$ <?php echo divideTwo($value1, $value2);?></strong>
+						<p>$ <?php echo divideTwo($value1, $value2);?>  (tax included)</p>
 					<?php
 					break;
 					

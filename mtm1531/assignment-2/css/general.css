@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html{
+	background-color: #999;
+	font: normal 100%/1 Arial, Helvetica, sans-serif;
+}
+
+body{
+	margin: 2em auto;
+	padding: 0 1em 0 1em;
+	width: 50em;
+	
+	background-color: #FFF;
+}
+
+p{
+	font-weight:bold;
+}
