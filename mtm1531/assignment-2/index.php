@@ -3,19 +3,31 @@
 	$value2 = $_POST['number-2'];
 
 	function addTwo($a, $b){
-		return($a + $b);
+		$value3 = ($a + $b) * 1.13;
+		$total = number_format($value3, 2, '.', ', ');
+		
+		return($total);
 	}
 	
 	function subtractTwo($a, $b){
-		return($a - $b);
+		$value3 = ($a - $b) * 1.13;
+		$total = number_format($value3, 2, '.', ', ');
+		
+		return($total);
 	}
 	
 	function multiplyTwo($a, $b){
-		return($a * $b);
+		$value3 = ($a * $b) * 1.13;
+		$total = number_format($value3, 2, '.', ', ');
+		
+		return($total);
 	}
 	
 	function divideTwo($a, $b){
-		return($a / $b);
+		$value3 = ($a / $b) * 1.13;
+		$total = number_format($value3, 2, '.', ', ');
+		
+		return($total);
 	}
 ?>
 
@@ -51,26 +63,26 @@
 				switch($_POST['function']) {
 					case '+':
 					?>
-						<strong>$<?php echo addTwo($value1, $value2);?></strong>
+						<strong>$ <?php echo addTwo($value1, $value2);?></strong>
 					<?php
 					break;
 					
 					case '-':
 					?>
-						<strong>$<?php echo subtractTwo($value1, $value2);?></strong>
+						<strong>$ <?php echo subtractTwo($value1, $value2);?></strong>
 					<?php
 					break;
 					
 					case '*':
 					?>
-						<strong>$<?php echo multiplyTwo($value1, $value2);?></strong>
+						<strong>$ <?php echo multiplyTwo($value1, $value2);?></strong>
 						
 					<?php
 					break;
 					
 					case '/':
 					?>
-						<strong>$<?php echo divideTwo($value1, $value2);?></strong>
+						<strong>$ <?php echo divideTwo($value1, $value2);?></strong>
 					<?php
 					break;
 					
