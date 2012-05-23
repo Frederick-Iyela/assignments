@@ -1,4 +1,39 @@
 <?php
+	if(isset($_POST['number-1'])){
+		$value1 = $_POST['number-1'];
+	}
+	
+	if(isset($_POST['number-2'])){
+		$value2 = $_POST['number-2'];
+	}
+
+	function addTwo($a, $b){
+		$value3 = ($a + $b) * 1.13;
+		$total = number_format($value3, 2, '.', ', ');
+		
+		return($total);
+	}
+	
+	function subtractTwo($a, $b){
+		$value3 = ($a - $b) * 1.13;
+		$total = number_format($value3, 2, '.', ', ');
+		
+		return($total);
+	}
+	
+	function multiplyTwo($a, $b){
+		$value3 = ($a * $b) * 1.13;
+		$total = number_format($value3, 2, '.', ', ');
+		
+		return($total);
+	}
+	
+	function divideTwo($a, $b){
+		$value3 = ($a / $b) * 1.13;
+		$total = number_format($value3, 2, '.', ', ');
+		
+		return($total);
+	}
 	
 ?>
 
@@ -11,7 +46,7 @@
 	</head>
 	
 	<body>
-		<?php if($_SERVER['REQUEST_METHOD'] == 'GET'): ?>
+		
 			<form method="post" action="index.php">
 			
 				<label for="number-1">Number 1</label>
@@ -30,68 +65,37 @@
 				
 				<button type="submit">Calculate</button>
 			</form>
-		<?php else: ?>
+		
 			<?php
-				$value1 = $_POST['number-1'];
-				$value2 = $_POST['number-2'];
-
-				function addTwo($a, $b){
-					$value3 = ($a + $b) * 1.13;
-					$total = number_format($value3, 2, '.', ', ');
-					
-					return($total);
-				}
-				
-				function subtractTwo($a, $b){
-					$value3 = ($a - $b) * 1.13;
-					$total = number_format($value3, 2, '.', ', ');
-					
-					return($total);
-				}
-				
-				function multiplyTwo($a, $b){
-					$value3 = ($a * $b) * 1.13;
-					$total = number_format($value3, 2, '.', ', ');
-					
-					return($total);
-				}
-				
-				function divideTwo($a, $b){
-					$value3 = ($a / $b) * 1.13;
-					$total = number_format($value3, 2, '.', ', ');
-					
-					return($total);
-				}
-				
-				switch($_POST['function']) {
-					case '+':
-					?>
-						<p>$ <?php echo addTwo($value1, $value2);?>  (tax included)</p>
-					<?php
-					break;
-					
-					case '-':
-					?>
-						<p>$ <?php echo subtractTwo($value1, $value2);?>  (tax included)</p>
-					<?php
-					break;
-					
-					case '*':
-					?>
-						<p>$ <?php echo multiplyTwo($value1, $value2);?>  (tax included)</p>
+				if(isset($_POST['function'])){
+					switch($_POST['function']) {
+						case '+':
+						?>
+							<p>Total: $ <?php echo addTwo($value1, $value2);?>  (tax included)</p>
+						<?php
+						break;
 						
-					<?php
-					break;
-					
-					case '/':
-					?>
-						<p>$ <?php echo divideTwo($value1, $value2);?>  (tax included)</p>
-					<?php
-					break;
-					
+						case '-':
+						?>
+							<p>Total: $ <?php echo subtractTwo($value1, $value2);?>  (tax included)</p>
+						<?php
+						break;
+						
+						case '*':
+						?>
+							<p>Total: $ <?php echo multiplyTwo($value1, $value2);?>  (tax included)</p>
+							
+						<?php
+						break;
+						
+						case '/':
+						?>
+							<p>Total: $ <?php echo divideTwo($value1, $value2);?>  (tax included)</p>
+						<?php
+						break;
+						
+					}
 				}
 			?>	
-			
-		<?php endif; ?>
 	</body>
 </html>
