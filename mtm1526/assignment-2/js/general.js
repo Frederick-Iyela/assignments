@@ -30,7 +30,7 @@ bind(addBtn, 'click', function(ev){
 	
 	if(listEntry){
 		ulList.appendChild(entry);
-		entry.innerHTML = '<a>' + listEntry.value + '</a>';
+		entry.innerHTML = listEntry.value;
 		listEntry.value = '';
 		entry.className = '';
 	}
@@ -42,10 +42,20 @@ bind(listEntry, 'change', function(ev){
 	
 	if(listEntry){
 		ulList.appendChild(entry);
-		entry.innerHTML = '<a>' + listEntry.value + '</a>';
+		entry.innerHTML = listEntry.value;
 		listEntry.value = '';
 		entry.className = '';
 	}
 	
+});
+
+bind(document.body, 'click', function(ev) {
+	
+	if(ev.target.tagName.toLowerCase() == 'li'){
+
+		//removeCurrent();
+		var checkEntry = ev.target;
+		checkEntry.className = 'current';
+	}
 });
 
