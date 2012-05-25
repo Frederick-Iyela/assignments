@@ -7,13 +7,41 @@ html{
 }
 
 body{
-	margin: 2em auto;
+	margin: 1em auto;
 	padding: 1em 1em;
 	width: 50em;
 	background-color: #FFF;
 }
 
+h1{
+	text-align: center;
+	text-decoration: underline;
+}
+
+/*.wrapper{
+	margin: 0 auto;
+	width: 15em;
+}*/
+
 .current{
-	text-decoration: line-through;
-	color: #FC6;
+	color: #0C0;
+	background-color: #FFF;
+}
+
+.current:before{
+	margin: 0 1em 0 0;
+	content: '✔';
+}
+
+ul{
+	list-style-type: none;
+}
+
+li{
+	margin: 0 0 0 -1.25em;
+	padding-left: 1em;
+	background-color: #0FF;
+	border: solid 1px;
+	border-color: #000;
+	font-size: 2em;
 }
