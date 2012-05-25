@@ -1,3 +1,19 @@
 @charset "UTF-8";
 /* CSS Document */
 
+html{
+	font: normal 100%/1 Arial, Helvetica, sans-serif;
+	background-color: #CCC;
+}
+
+body{
+	margin: 2em auto;
+	padding: 1em 1em;
+	width: 50em;
+	background-color: #FFF;
+}
+
+.current{
+	text-decoration: line-through;
+	color: #FC6;
+}
