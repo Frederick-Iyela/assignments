@@ -16,13 +16,7 @@ var bind = function(elem, ev, func){
 
 var removeCurrent = function() {
 
-	var todoEntry = document.getElementsByTagName('li');
-	var total = todoEntry.length;
-
-	for(var i = 0; i < total; i++){
-
-		todoEntry[i].className = '';
-	}
+	entry.className = '';
 };
 
 bind(addBtn, 'click', function(ev){
@@ -32,7 +26,7 @@ bind(addBtn, 'click', function(ev){
 		ulList.appendChild(entry);
 		entry.innerHTML = listEntry.value;
 		listEntry.value = '';
-		entry.className = '';
+		//entry.className = '';
 	}
 	
 });
@@ -44,7 +38,7 @@ bind(listEntry, 'change', function(ev){
 		ulList.appendChild(entry);
 		entry.innerHTML = listEntry.value;
 		listEntry.value = '';
-		entry.className = '';
+		//entry.className = '';
 	}
 	
 });
@@ -52,8 +46,10 @@ bind(listEntry, 'change', function(ev){
 bind(document.body, 'click', function(ev) {
 	
 	if(ev.target.tagName.toLowerCase() == 'li'){
-
-		//removeCurrent();
+		if(entry.className == 'current'){
+			removeCurrent();
+		}
+		
 		var checkEntry = ev.target;
 		checkEntry.className = 'current';
 	}
