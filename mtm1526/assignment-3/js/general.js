@@ -1,7 +1,7 @@
 // JavaScript Document
 
 $(document).ready(function() {
-	$(form).on('submit', function(ev) {
+	$('form').on('submit', function(ev) {
 		
 		ev.preventDefault();
 		
@@ -13,9 +13,11 @@ $(document).ready(function() {
 			break;
 			
 			case 'Border Colour':
+				$('.circle').css('border-color', chosenColour);
 			break;
 			
 			case 'Colour':
+				$('.circle span').css('color', chosenColour);
 			break;
 		}
 		
