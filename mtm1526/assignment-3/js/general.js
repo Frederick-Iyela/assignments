@@ -1,5 +1,7 @@
 // JavaScript Document
 
+var isHidden = false;
+
 $(document).ready(function() {
 	$('form').on('submit', function(ev) {
 		
@@ -21,6 +23,17 @@ $(document).ready(function() {
 			break;
 		}
 		
+	});
+	
+	$('#hide-show').on('click', function(){
+		if(isHidden==false){
+			$('.circle').hide().fadeOut(500);
+			isHidden = true;
+		}
+		else{
+			$('.circle').hide().fadeIn(500);
+			isHidden = false;
+		}
 	});
 	
 });
