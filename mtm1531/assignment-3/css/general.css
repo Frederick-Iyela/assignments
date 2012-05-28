@@ -1,3 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
 
+.error{
+	color: #F33;
+}
