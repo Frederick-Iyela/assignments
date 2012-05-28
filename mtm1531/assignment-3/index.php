@@ -1,25 +1,32 @@
+<?php
+	require_once 'includes/form-processor.php';
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title>Registration Form Validation</title>
+		<link href="css/general.css" rel="stylesheet">
 	</head>
 	
 	<body>
 		<form method="post" action="index.php">
 			<div>
 				<label for="name">Name: </label>
-				<input type="text" id="name" name="name" required value="">
+				<input type="text" id="name" name="name" required value="<?php echo $name; ?>">
+				<?php if (isset($errors['name'])): ?><strong class="error"> * required</strong><?php endif; ?>
 			</div>
 			
 			<div>
 				<label for="email">Email: </label>
-				<input type="email" id="email" name="email" required value="">
+				<input type="email" id="email" name="email" required value="<?php echo $name; ?>">
+				<?php if (isset($errors['email'])): ?><strong class="error"> * required</strong><?php endif; ?>
 			</div>
 			
 			<div>
 				<label for="username">Username: </label>
-				<input type="text" id="username" name="username" required value="">
+				<input type="text" id="username" name="username" required value="<?php echo $name; ?>">
+				<?php if (isset($errors['username'])): ?><strong class="error"> * required, and must be less than 25 characters long</strong><?php endif; ?>
 			</div>
 			
 			<div>
@@ -42,12 +49,13 @@
 			
 			<div>
 				<label for="notes">Notes</label>
-				<textarea id="notes" name="notes">
+				<textarea id="notes" name="notes"></textarea>
 			</div>
 			
 			<div>
 				<input type="checkbox" id="acceptterms" name="acceptterms" required value="1">
 				<label for="acceptterms">Accept Terms</label>
+				<?php if (isset($errors['acceptterms'])): ?><strong class="error"> *Terms must be accepted!</strong><?php endif; ?>
 			</div>
 			
 			<button type="submit">Send</button>
