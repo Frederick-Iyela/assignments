@@ -1,5 +1,5 @@
 <?php
-	$error = array();
+	$errors = array();
 	
 	$name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
 	$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
@@ -10,11 +10,11 @@
 	
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
 		if(empty($name)){
-			$error['name'] = true;
+			$errors['name'] = true;
 		}
 		
 		if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-			$error['email'] = true;
+			$errors['email'] = true;
 		}
 		
 		if(mb_strlen($username) < 5 || mb_strlen($username) > 25){
