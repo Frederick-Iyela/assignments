@@ -1,6 +1,25 @@
 @charset "UTF-8";
 /* CSS Document */
 
+.container{
+	background-color: #CCC;
+	width: 30em;
+	margin: 2em auto;
+	padding: 0.5em 2em 0.5em 2em;
+}
+
+.container-2{
+	margin: 1em 0 1em 0;
+}
+
+.container-3{
+	margin: 1em 2em 0.25em 0;
+}
+
+#box{
+	margin: 1em 0 0.25em 0;
+}
+
 .error{
 	color: #F33;
 }
