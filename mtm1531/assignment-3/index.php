@@ -19,19 +19,20 @@
 			
 			<div>
 				<label for="email">Email: </label>
-				<input type="email" id="email" name="email" required value="<?php echo $name; ?>">
+				<input type="email" id="email" name="email" required value="<?php echo $email; ?>">
 				<?php if (isset($errors['email'])): ?><strong class="error"> * required</strong><?php endif; ?>
 			</div>
 			
 			<div>
 				<label for="username">Username: </label>
-				<input type="text" id="username" name="username" required value="<?php echo $name; ?>">
+				<input type="text" id="username" name="username" required value="<?php echo $username; ?>">
 				<?php if (isset($errors['username'])): ?><strong class="error"> * required, and must be less than 25 characters long</strong><?php endif; ?>
 			</div>
 			
 			<div>
 				<label for="password">Password: </label>
-				<input type="password" id="password" name="password" required value="">
+				<input type="password" id="password" name="password" required value="<?php echo $password; ?>">
+				<?php if (isset($errors['password'])): ?><strong class="error"> * required, and must be 5 to 16 characters long</strong><?php endif; ?>
 			</div>
 			
 			<fieldset>
@@ -49,7 +50,7 @@
 			
 			<div>
 				<label for="notes">Notes</label>
-				<textarea id="notes" name="notes"></textarea>
+				<textarea id="notes" name="notes" value="<?php echo $notes; ?>"></textarea>
 			</div>
 			
 			<div>
