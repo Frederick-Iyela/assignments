@@ -26,7 +26,7 @@
 			<div>
 				<label for="username">Username: </label>
 				<input type="text" id="username" name="username" required value="<?php echo $username; ?>">
-				<?php if (isset($errors['username'])): ?><strong class="error"> * required, and must be less than 25 characters long</strong><?php endif; ?>
+				<?php if (isset($errors['username'])): ?><strong class="error"> * required, and must be 5 to 25 characters long</strong><?php endif; ?>
 			</div>
 			
 			<div>
@@ -50,7 +50,7 @@
 			
 			<div>
 				<label for="notes">Notes</label>
-				<textarea id="notes" name="notes" value="<?php echo $notes; ?>"></textarea>
+				<textarea id="notes" name="notes"><?php echo $notes; ?></textarea>
 			</div>
 			
 			<div>
