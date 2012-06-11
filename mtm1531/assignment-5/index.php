@@ -17,6 +17,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Movie Browser</title>
+		<link href="css/general.css" rel="stylesheet">
 	</head>
 	
 	<body>
