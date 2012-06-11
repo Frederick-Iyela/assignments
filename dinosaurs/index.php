@@ -20,6 +20,8 @@
 	</head>
 	
 	<body>
+		<a href="add.php">Add New Dinosaur</a>
+	
 		<?php foreach($results as $dino):  ?>
 		<h2><a href="single.php?id=<?php echo $dino['id']; ?>"><?php echo $dino['dino_name']; ?></a></h2>
 		<dl>
