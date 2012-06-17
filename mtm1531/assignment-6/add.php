@@ -19,12 +19,12 @@
 			require_once 'includes/db.php';
 			
 			$sql = $db->prepare('
-				INSERT INTO dinosaurs (movie_title, release_date, director)
+				INSERT INTO movies (movie_title, release_date, director)
 				VALUES (:movie_title, :release_date, :director)
 			');
 			
 			$sql->bindValue(':movie_title', $movie_title, PDO::PARAM_STR);
-			$sql->bindValue(':release_date', $release_date, PDO::PARAM_INT);
+			$sql->bindValue(':release_date', $release_date, PDO::PARAM_STR);
 			$sql->bindValue(':director', $director, PDO::PARAM_STR);
 			$sql->execute();
 			
