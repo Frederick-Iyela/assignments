@@ -18,7 +18,6 @@
 		}
 		
 		if(empty($errors)){
-			// Do DB stuff
 			require_once 'includes/db.php';
 			
 			$sql = $db->prepare('
@@ -63,6 +62,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Edit Movies</title>
+		<link href="css/general.css" rel="stylesheet">
 	</head>
 	
 	<body>
@@ -70,17 +70,17 @@
 		
 		<form method="post" action="edit.php?id=<?php echo $id; ?>">
 			<div>
-				<label for="movie_title">Movie Title<?php if (isset($errors['movie_title'])): ?><strong class="error">is required</strong><?php endif; ?></label>
+				<label for="movie_title">Movie Title<?php if (isset($errors['movie_title'])): ?><strong class="error"> is required</strong><?php endif; ?></label>
 				<input id="movie_title" name="movie_title" required value="<?php echo $movie_title; ?>">
 			</div>
 			
 			<div>
-				<label for="release_date">Release Date<?php if (isset($errors['release_date'])): ?><strong class="error">is required</strong><?php endif; ?></label>
+				<label for="release_date">Release Date<?php if (isset($errors['release_date'])): ?><strong class="error"> is required</strong><?php endif; ?></label>
 				<input id="release_date" name="release_date" required value="<?php echo $release_date; ?>">
 			</div>
 			
 			<div>
-				<label for="director">Director<?php if (isset($errors['director'])): ?><strong class="error">is required</strong><?php endif; ?></label>
+				<label for="director">Director<?php if (isset($errors['director'])): ?><strong class="error"> is required</strong><?php endif; ?></label>
 				<input id="director" name="director" required value="<?php echo $director; ?>">
 			</div>
 			

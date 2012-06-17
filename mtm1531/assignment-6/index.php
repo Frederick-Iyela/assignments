@@ -18,6 +18,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Extending Movie Browser</title>
+		<link href="css/general.css" rel="stylesheet">
 	</head>
 	
 	<body>
