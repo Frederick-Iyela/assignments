@@ -9,7 +9,9 @@
 			$errors['movie_title'] = true;
 		}
 		
-		
+		if(strlen($release_date) < 10 || strlen($release_date) > 10){
+			$errors['release_date'] = true;
+		}
 		
 		if(strlen($director) < 1 || strlen($director) > 256){
 			$errors['director'] = true;
@@ -52,7 +54,7 @@
 			</div>
 			
 			<div>
-				<label for="release_date">Release Date<?php if (isset($errors['release_date'])): ?><strong class="error"> is required</strong><?php endif; ?></label>
+				<label for="release_date">Release Date (YYYY-MM-DD)<?php if (isset($errors['release_date'])): ?><strong class="error"> is required</strong><?php endif; ?></label>
 				<input id="release_date" name="release_date" required value="<?php echo $release_date; ?>">
 			</div>
 			
