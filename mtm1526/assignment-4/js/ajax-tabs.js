@@ -7,43 +7,40 @@ $(document).ready(function(){
 	var checkEntry;
 	
 	$.get('earth.html', function(data){
-		
+	
 		$('#fillme').load('earth.html');
 
 	});
 
-	$('#earth').on('click', function(ev){
+	$('#earth').on('click', function(){
 		
-		checkEntry = ev.target;
-		checkEntry.className = 'current';
+		removeCurrent();
+		$(this).addClass('current');
 		
 		$('#fillme').load('earth.html');
 
 	});
 	
-	$('#jupiter').on('click', function(ev){
+	$('#jupiter').on('click', function(){
 		removeCurrent();
-		checkEntry = ev.target;
-		checkEntry.className = 'current';
+		$(this).addClass('current');
 		
 		$('#fillme').load('jupiter.html');
 
 	});
 
-	$('#mars').on('click', function(ev){
+	$('#mars').on('click', function(){
 		removeCurrent();
-		checkEntry = ev.target;
-		checkEntry.className = 'current';
+		$(this).addClass('current');
 		
 		$('#fillme').load('mars.html');
 
 	});
 
 
-	$('#venus').on('click', function(ev){
+	$('#venus').on('click', function(){
 		removeCurrent();
-		checkEntry = ev.target;
-		checkEntry.className = 'current';
+		$(this).addClass('current');
 	
 		$('#fillme').load('venus.html');
 		
@@ -52,7 +49,7 @@ $(document).ready(function(){
 	
 	var removeCurrent = function() {
 
-		checkEntry.className = '';
+		$('nav li').removeClass('current');
 	};
 	
 });
