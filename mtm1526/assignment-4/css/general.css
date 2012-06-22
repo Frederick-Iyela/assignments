@@ -7,7 +7,7 @@ html{
 }
 
 body{
-	margin: 0 auto;
+	margin: 2em auto;
 	padding: 0;
 	width: 30em;
 }
@@ -20,26 +20,15 @@ nav ul{
 
 nav li{
 	display: inline;
+	padding: 0 1em 0 1em;
 }
 
-nav a,
-nav a:link,
-nav a:visited{
-	display: inline-block;
-	border-radius: 4px 4px 0 0;
-	background-color: #e2e2e2;
-	text-decoration: none;
-	color: #000;
-}
-
-nav .current a,
-nav .current a:link,
-nav .current a:visited{
+.current{
 	background-color: #fff;
 	padding: 1em;
 }
 
-article{
+#fillme{
 	background-color: #fff;
 	padding: 1em;
 }
