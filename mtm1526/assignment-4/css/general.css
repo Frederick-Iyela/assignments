@@ -23,9 +23,14 @@ nav li{
 	padding: 0 1em 0 1em;
 }
 
+nav li:hover{
+	background-color: #FC0;
+	padding-top: 0.25em;
+}
+
 .current{
 	background-color: #fff;
-	padding: 1em;
+	padding-top: 0.25em;
 }
 
 #fillme{
