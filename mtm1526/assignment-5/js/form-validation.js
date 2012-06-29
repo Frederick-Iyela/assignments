@@ -1,5 +1,9 @@
 $(document).ready(function(){
 	var userAvailable = $('.user-available');
+	var emailAvailable = $('.email-available');
+	var cityAvailable = $('.city-available');
+	var postcodeAvailable = $('.postcode-available');
+	var zipcodeAvailable = $('.zipcode-available');
 	var passwordReqs = 0;
 	
 	$('#username').on('change', function(ev){
@@ -25,6 +29,32 @@ $(document).ready(function(){
 			userAvailable.attr('data-status', 'unavailable').html('Unavailable');
 		}
 	});
+	
+	
+	$('#email').on('change', function(ev){
+		var email = $(this).val();
+		
+		emailAvailable.attr('data-status', 'unchecked');
+		
+		if(email.length >= 3 && username.length <= 25){
+			var ajax = $.post('check-email.php', {
+				'email' : email
+			});
+			
+			ajax.done(function (data){
+				if(data == 'available'){
+					emailAvailable.attr('data-status', 'available').html('Available');
+				}
+				else{
+					emailAvailable.attr('data-status', 'unavailable').html('Unavailable');
+				}
+			});
+		}
+		else{
+			emailAvailable.attr('data-status', 'unavailable').html('Unavailable');
+		}
+	});
+	
 	
 	$('#password').on('keyup', function(ev) {
 		var password = $(this).val();
@@ -55,8 +85,54 @@ $(document).ready(function(){
 		}
 	});
 	
+	
+	$('#city').on('keyup', function(ev) {
+		var city = $(this).val();
+		
+		if(city.match(/[a-zA-Z]/)){
+			cityAvailable.attr('data-correct', 'correct');
+		}
+		
+		else{
+			cityAvailable.attr('data-correct', 'incorrect');
+		}
+		
+	});
+	
+	
+	$('#postcode').on('keyup', function(ev) {
+		var postcode = $(this).val();
+		
+		if(postcode.match(/^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$/)){
+			postcodeAvailable.attr('data-postcode', 'correct');
+		}
+		
+		else{
+			postcodeAvailable.attr('data-postcode', 'incorrect');
+		}
+		
+	});
+	
+	
+	$('#zipcode').on('keyup', function(ev) {
+		var zipcode = $(this).val();
+		
+		if(zipcode.match(/^\d{5}(-\d{4})?$/)){
+			zipcodeAvailable.attr('data-zipcode', 'correct');
+		}
+		
+		else{
+			zipcodeAvailable.attr('data-zipcode', 'incorrect');
+		}
+		
+	});
+	
+	
 	$('#form').on('submit', function (ev) {
-		if(userAvailable.attr('data-status') == 'unchecked' || userAvailable.attr('data-status') == 'unavailable' || passwordReqs < 5){
+		if(userAvailable.attr('data-status') == 'unchecked' || userAvailable.attr('data-status') == 'unavailable' || 
+			emailAvailable.attr('data-status') == 'unchecked' || emailAvailable.attr('data-status') == 'unavailable' || 
+			passwordReqs < 5 || cityAvailable.attr('data-correct') == 'incorrect' || postcodeAvailable.attr('data-postcode') == 'incorrect' ||
+			zipcodeAvailable.attr('data-zipcode') == 'incorrect'){
 			ev.preventDefault();
 		}
 	});
