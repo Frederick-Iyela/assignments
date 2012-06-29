@@ -23,6 +23,26 @@
 	content:"✖";
 }
 
+.email-available:before {
+	content:"✔";
+}
+
+.email-available[data-status="unchecked"]{
+	display: none;
+}
+
+.email-available[data-status="available"] {
+	color: #090;
+}
+
+.email-available[data-status="unavailable"] {
+	color: #f33;
+}
+
+.email-available[data-status="unavailable"]:before {
+	content:"✖";
+}
+
 .pass-reqs{
 	list-style-type: none;
 }
@@ -36,4 +56,34 @@
 .pass-reqs li[data-state="achieved"]:before {
 	color: #090;
 	content:"✔";
+}
+
+.city-available [data-correct="correct"]:before {
+	color: #090;
+	content:"✔";
+}
+
+.city-available [data-correct="incorrect"]:before {
+	color: #f33;
+	content:"✖";
+}
+
+.postcode-available [data-postcode="correct"]:before {
+	color: #090;
+	content:"✔";
+}
+
+.postcode-available [data-postcode="incorrect"]:before {
+	color: #f33;
+	content:"✖";
+}
+
+.zipcode-available [data-zipcode="correct"]:before {
+	color: #090;
+	content:"✔";
+}
+
+.zipcode-available [data-zipcode="incorrect"]:before {
+	color: #f33;
+	content:"✖";
 }
