@@ -3,7 +3,7 @@
 $(document).ready(function(){
 	$('#earth').on('click', function(ev){
 		ev.preventDefault();
-		$('#fillme').load('../includes/earth.php');
+		$('#fillme').load('includes/earth.php');
 		$('nav li').removeClass('current');
 		$('#earth').addClass('current');
 	});
