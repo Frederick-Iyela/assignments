@@ -10,21 +10,21 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Planet</title>
+		<title>Progressive Enhancement: Planets</title>
 		<link href="css/general.css" rel="stylesheet">
 	</head>
 	
 	<body>
 		<nav>
 			<ul>
-				<li <?php if (($planet != 'mars') && ($planet != 'jupiter') && ($planet != 'venus')) {?> class = "current" <?php } ?>><a href="?planet=earth">Earth</a></li>
-				<li <?php if ($planet == 'mars') {?> class = "current" <?php } ?> ><a href="?planet=mars">Mars</a></li>
-				<li <?php if ($planet == 'jupiter') {?> class = "current" <?php } ?>><a href="?planet=jupiter">Jupiter</a></li>
-				<li <?php if ($planet == 'venus') {?> class = "current" <?php } ?>><a href="?planet=venus">Venus</a></li>
+				<li id="earth"<?php if (($planet != 'mars') && ($planet != 'jupiter') && ($planet != 'venus')) {?> class = "current" <?php } ?>><a href="?planet=earth">Earth</a></li>
+				<li id="mars"<?php if ($planet == 'mars') {?> class = "current" <?php } ?> ><a href="?planet=mars">Mars</a></li>
+				<li id="jupiter"<?php if ($planet == 'jupiter') {?> class = "current" <?php } ?>><a href="?planet=jupiter">Jupiter</a></li>
+				<li id="venus"<?php if ($planet == 'venus') {?> class = "current" <?php } ?>><a href="?planet=venus">Venus</a></li>
 			</ul>
 		</nav>
 		
-		<article>
+		<article id="fillme">
 			<?php
 				
 				switch($planet){
@@ -45,5 +45,8 @@
 				}
 			?>
 		</article>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script src="js/planet-tabs.js"></script>
 	</body>
 </html>
